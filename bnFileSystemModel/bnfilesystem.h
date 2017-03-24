@@ -18,6 +18,9 @@ public:
     explicit bnFileSystem(QWidget *parent = 0);
     ~bnFileSystem();
 
+private slots:
+    void on_treeView_clicked(const QModelIndex &index);
+
 private:
     Ui::bnFileSystem *ui;
     QFileSystemModel *dirmodel;
