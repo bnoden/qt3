@@ -6,6 +6,12 @@ bnFileSystem::bnFileSystem(QWidget *parent) :
     ui(new Ui::bnFileSystem)
 {
     ui->setupUi(this);
+
+    QString sPath = "C:/";
+
+    dirmodel = new QFileSystemModel(this);
+    dirmodel->setRootPath(sPath);
+    ui->treeView->setModel(dirmodel);
 }
 
 bnFileSystem::~bnFileSystem()

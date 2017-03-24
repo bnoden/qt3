@@ -2,6 +2,9 @@
 #define BNFILESYSTEM_H
 
 #include <QDialog>
+#include <QtCore>
+#include <QtGui>
+#include <QFileSystemModel>
 
 namespace Ui {
 class bnFileSystem;
@@ -17,6 +20,8 @@ public:
 
 private:
     Ui::bnFileSystem *ui;
+    QFileSystemModel *dirmodel;
+    QFileSystemModel *filemodel;
 };
 
 #endif // BNFILESYSTEM_H
