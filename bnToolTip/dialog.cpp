@@ -7,8 +7,12 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->btn1->setToolTip(ui->btn1->text());
-    ui->btn2->setToolTip(ui->btn2->text());
+    QString bnGreen = "#84E387", bnRed = "#E38484";
+
+    ui->btn1->setToolTip("<font color="+bnGreen+"><strong>"+
+                         ui->btn1->text()+"</strong></font>");
+
+    ui->btn2->setToolTip("<img src=':/img/img/note.png'>");
 }
 
 Dialog::~Dialog()
